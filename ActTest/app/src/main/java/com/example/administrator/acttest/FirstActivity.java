@@ -25,12 +25,13 @@ public class FirstActivity extends BaseActivity {
 //                Toast.makeText(FirstActivity.this, "Button 1 has been clicked",Toast.LENGTH_LONG).show();
 //                Intent intent = new Intent("acttest.ACTION_START");
 //                intent.addCategory("android.intent.category.MY_CATEGORY");
-                Intent intent = new Intent("acttest.activity.second");
-                intent.addCategory("acttest.activity.second");
+//                Intent intent = new Intent("acttest.activity.second");
+//                intent.addCategory("acttest.activity.second");
 //                String data = "EXTRA DATA!";
 //                intent.putExtra("extra_data", data);
-                startActivity(intent);
+//                startActivity(intent);
 //                startActivityForResult(intent,1);
+                SecondActivity.actionStart(FirstActivity.this,"data1,666","data2,6666");
             }
         });
     }

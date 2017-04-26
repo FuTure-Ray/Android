@@ -1,5 +1,6 @@
 package com.example.administrator.acttest;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
@@ -31,5 +32,12 @@ public class SecondActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public static void actionStart(Context context,String data1,String data2){
+        Intent intent = new Intent(context,SecondActivity.class);
+        intent.putExtra("data1",data1);
+        intent.putExtra("data2",data2);
+        context.startActivity(intent);
     }
 }
