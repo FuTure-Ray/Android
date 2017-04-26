@@ -12,16 +12,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class FirstActivity extends BaseActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.first_layout);
-        Button button1 = (Button) findViewById(R.id.button_1);
-        Log.d("ActTest/1st.", "Task id is" + getTaskId());
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    private View.OnClickListener onButtonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
 //                Toast.makeText(FirstActivity.this, "Button 1 has been clicked",Toast.LENGTH_LONG).show();
 //                Intent intent = new Intent("acttest.ACTION_START");
 //                intent.addCategory("android.intent.category.MY_CATEGORY");
@@ -31,9 +24,17 @@ public class FirstActivity extends BaseActivity {
 //                intent.putExtra("extra_data", data);
 //                startActivity(intent);
 //                startActivityForResult(intent,1);
-                SecondActivity.actionStart(FirstActivity.this,"data1,666","data2,6666");
-            }
-        });
+            SecondActivity.actionStart(FirstActivity.this,"data1,666","data2,6666");
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.first_layout);
+        Button button1 = (Button) findViewById(R.id.button_1);
+        Log.d("ActTest/1st.", "Task id is" + getTaskId());
+        button1.setOnClickListener(onButtonClickListener);
     }
 
     @Override
