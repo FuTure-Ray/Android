@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ActTest</string>
+    <string name="firstActivityTitle">First Activity</string>
 </resources>

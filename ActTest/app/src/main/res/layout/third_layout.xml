@@ -3,11 +3,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <Button
-        android:id="@+id/button_1"
+        android:id="@+id/button_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button_1"/>
-    
+        android:text="Button_3" />
+
 </LinearLayout>
